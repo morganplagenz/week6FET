@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="em">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <!-- these will not be displayed until the certain player wins, or it's a draw-->
+    <div class="alert alert-primary pl-3" role="alert" id="playerXWon">
+        Player X Wins! <button id="xWins">Play Again</button>
+    </div>
+    <div class="alert alert-primary pl-3" role="alert" id="playerOWon">
+        Player O Wins! <button id="oWins">Play Again</button>
+    </div>
+    <div class="alert alert-primary pl-3" role="alert" id="gameInDraw">
+        This round ended in a draw. <button id="draw">Play Again</button>
+    </div>
+
+
+    <div class="container p-3">
+        <h1>Let's Play Tic-Tac Toe</h1>
+        <h3 id="player">It's Player O's Turn</h3> <!--this will display whoevers turn it is, but by default, it's Player O's-->
+    </div>
+    
+    <!--the board-->
+    <div class="container">
+        <div class="row">
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="0">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="1">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="2">
+                <div class="innerCell"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="3">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="4">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="5">
+                <div class="innerCell"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="6">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="7">
+                <div class="innerCell"></div>
+            </div>
+            <div class="indCell col-4 hover text-center border border-primary border-5 bg-gradient" data-cell id="8">
+                <div class="innerCell"></div>
+            </div>
+        </div>
+      </div>
+
+      <!--This container will show a trash bin that, when clicked, clearns the board-->
+      <div class="container pt-5">
+          <img class="tint" src="empty.png" width="30px" id="empty-button">
+      </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
